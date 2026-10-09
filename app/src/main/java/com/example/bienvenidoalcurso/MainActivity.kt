@@ -34,7 +34,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 @Composable
 fun BusinessCard() {
     Column(
@@ -46,17 +45,11 @@ fun BusinessCard() {
         verticalArrangement = Arrangement.SpaceBetween
     ) {
         Spacer(modifier = Modifier.weight(1f))
-
-        // Sección Central: Logo, Nombre y Cargo
         HeaderSection(
             name = "Jennifer Doe",
             title = "Android Developer Extraordinaire"
         )
-
-        // Espaciador para empujar la sección de contacto al final
         Spacer(modifier = Modifier.weight(1f))
-
-        // Sección Inferior: Información de Contacto
         ContactSection(
             phone = "+11 (123) 444 555 666",
             social = "@AndroidDev",
@@ -96,7 +89,6 @@ fun HeaderSection(name: String, title: String) {
                 )
             }
         }
-
         Text(
             text = name,
             fontSize = 40.sp,
@@ -104,7 +96,6 @@ fun HeaderSection(name: String, title: String) {
             color = Color.Black,
             modifier = Modifier.padding(top = 16.dp, bottom = 8.dp)
         )
-
         Text(
             text = title,
             fontSize = 14.sp,
